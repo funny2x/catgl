@@ -7,10 +7,10 @@ layout (location = 4) in vec3 Tangent;	 //* 切线
 layout (location = 5) in vec3 Bitangent; //* 副切线
 
 //? 引擎数据
-layout (std140) uniform GlobalMatrix //* 全局变量
+layout (std140, binding = 0) uniform GlobalMatrix //* 全局变量
 {
-    mat4 ViewMatrix;           //* 观察矩阵
-    mat4 ProjectionMatrix;     //* 投影矩阵
+    mat4 ViewMatrix;           //* 观察矩阵 4*16
+    mat4 ProjectionMatrix;     //* 投影矩阵 4*16
 };
 uniform mat4 Model;            //* 模型位置(Vertex类)
 

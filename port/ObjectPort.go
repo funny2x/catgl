@@ -37,7 +37,6 @@ type SceneObject interface {
 type CameraObject interface {
 	Init
 	Update() //? 摄像机更新
-
 }
 
 // LightObject 灯光对象
