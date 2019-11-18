@@ -46,8 +46,8 @@ func Game(Scene *catgl.Scene) {
 		//? 引擎数据
 		layout (std140, binding = 0) uniform GlobalMatrix //* 全局变量
 		{
-		    mat4 ViewMatrix;           //* 观察矩阵 4*16
 		    mat4 ProjectionMatrix;     //* 投影矩阵 4*16
+		    mat4 ViewMatrix;           //* 观察矩阵 4*16 
 		};
 		uniform mat4 Model;            //* 模型位置(Vertex类)
 		//? 内部函数
