@@ -17,7 +17,7 @@ import (
 
 // CameraObjectData 摄像机底层对象数据
 type CameraObjectData struct {
-	// 着色器指针
+	// 着色器变量指针
 	GlobalMatrix uint32 // 着色器矩阵全局变量地址
 	// 着色器变量
 	ProjectionMatrix mgl32.Mat4 // 投影矩阵

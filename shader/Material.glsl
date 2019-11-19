@@ -10,5 +10,5 @@ uniform	Color DisplacementMapping;  //* 置换贴图
 //? 深度贴图
 uniform	Color DepthMap; 
 //? 贴图列表
-uniform sampler2D [31]Texture;
-uniform bool [31]IsTexture;
+uniform sampler2D Texture[31];
+uniform bool IsTexture[31];
