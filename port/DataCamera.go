@@ -26,12 +26,11 @@ type CameraObjectData struct {
 
 // Init 初始化
 func (C *CameraObjectData) Init() error {
-	gl.GenBuffers(1, &C.GlobalMatrix)                          // 创建缓冲器
-	gl.BindBuffer(gl.UNIFORM_BUFFER, C.GlobalMatrix)           // 绑定缓冲区
-	gl.BufferData(gl.UNIFORM_BUFFER, 128, nil, gl.STATIC_DRAW) // 分配内存空间
-	gl.BindBuffer(gl.UNIFORM_BUFFER, 0)                        // 解除引用
-	// 绑定着色器变量定义的绑定点,矩阵定义绑定在0号绑定点
-	gl.BindBufferRange(gl.UNIFORM_BUFFER, 0, C.GlobalMatrix, 0, 128)
+	gl.GenBuffers(1, &C.GlobalMatrix)                                // 创建缓冲器
+	gl.BindBuffer(gl.UNIFORM_BUFFER, C.GlobalMatrix)                 // 绑定缓冲区
+	gl.BufferData(gl.UNIFORM_BUFFER, 128, nil, gl.DYNAMIC_DRAW)      // 分配内存空间
+	gl.BindBufferRange(gl.UNIFORM_BUFFER, 0, C.GlobalMatrix, 0, 128) // 绑定着色器变量定义的绑定点,矩阵定义绑定在0号绑定点
+	gl.BindBuffer(gl.UNIFORM_BUFFER, 0)                              // 解除引用
 	return nil
 }
 
