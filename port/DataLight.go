@@ -62,7 +62,7 @@ func (L *LightData) Init() error {
 
 // Delete 销毁
 func (L *LightData) Delete() {
-	gl.DeleteBuffers(1, &C.GlobalMatrix)
+	gl.DeleteBuffers(1, &L.global)
 }
 
 // Update 主更新
