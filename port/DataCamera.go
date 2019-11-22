@@ -34,6 +34,11 @@ func (C *CameraObjectData) Init() error {
 	return nil
 }
 
+// Delete 销毁
+func (C *CameraObjectData) Delete() {
+	gl.DeleteBuffers(1, &C.GlobalMatrix)
+}
+
 // UpdateProjectionMatrix 更新(投影矩阵)
 func (C *CameraObjectData) UpdateProjectionMatrix() {
 	gl.BindBuffer(gl.UNIFORM_BUFFER, C.GlobalMatrix)
@@ -94,4 +99,9 @@ func (C *CameraData) Update() {
 	// 视图矩阵
 	C.object.ViewMatrix = mgl32.LookAtV(C.Eye, C.Center, C.Up)
 	C.object.UpdateViewMatrix()
+}
+
+// Delete 销毁
+func (C *CameraData) Delete() {
+	C.object.Delete()
 }

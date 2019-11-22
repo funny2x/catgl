@@ -15,6 +15,16 @@ type Init interface {
 	Init() error
 }
 
+// Update 更新接口
+type Update interface {
+	Update()
+}
+
+// Delete 更新接口
+type Delete interface {
+	Delete()
+}
+
 // CallInit 回调初始化
 type CallInit struct {
 	Init
@@ -23,6 +33,7 @@ type CallInit struct {
 
 // GameObject 游戏对象
 type GameObject interface {
+	Delete
 	UpdateBeforehand() //? 预更新
 	UpdateRendering()  //? 渲染更新
 }
@@ -30,24 +41,28 @@ type GameObject interface {
 // SceneObject 场景对象
 type SceneObject interface {
 	Init
-	Update()
+	Update
+	Delete
 }
 
 // CameraObject 摄像机对象
 type CameraObject interface {
 	Init
-	Update() //? 摄像机更新
+	Update
+	Delete
 }
 
 // LightObject 灯光对象
 type LightObject interface {
 	Init
-	Update() //? 灯光更新
+	Update
+	Delete
 }
 
 // ShaderObject 着色器对象
 type ShaderObject interface {
 	Init
+	Delete
 	GetProgram() uint32 //? 得到着色器指针
 }
 

@@ -25,15 +25,18 @@ func (S *ShaderData) Init() (err error) {
 	if Svertex == 0 {
 		return errors.New("顶点着色器编译失败: " + err.Error())
 	}
+	defer glDeleteShader(Svertex)
 	Sfragment, err = ShaderCompile(S.Fragment, gl.FRAGMENT_SHADER)
 	if Sfragment == 0 {
 		return errors.New("片段着色器编译失败: " + err.Error())
 	}
+	defer glDeleteShader(Sfragment)
 	if S.IsGeometry {
 		Sgeometry, err = ShaderCompile(S.Geometry, gl.GEOMETRY_SHADER)
 		if Sgeometry == 0 {
 			return errors.New("几何着色器编译失败: " + err.Error())
 		}
+		defer glDeleteShader(Sgeometry)
 	}
 	S.Program, err = ShaderLinkProgram(Svertex, Sfragment, Sgeometry)
 	return err
@@ -42,6 +45,11 @@ func (S *ShaderData) Init() (err error) {
 // GetProgram 得到着色器程序
 func (S *ShaderData) GetProgram() uint32 {
 	return S.Program
+}
+
+// Delete 销毁
+func (S *ShaderData) Delete() {
+	gl.DeleteProgram(S.Program)
 }
 
 // ShaderCompile  创建着色器

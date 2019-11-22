@@ -89,7 +89,7 @@ type TextureData struct {
 	UnitID uint32 //? 纹理单元
 	Target uint32 //? 纹理类型
 	// 外部信息
-	File      string //? 纹理地址
+	File      string //? 纹理路径
 	IsTexture bool   //? 是否生效
 }
 
@@ -137,6 +137,11 @@ func (T *TextureData) Init() error {
 	// 设置生效
 	T.IsTexture = true
 	return nil
+}
+
+// Delete 销毁
+func (T *TextureData) Delete() {
+	gl.DeleteTextures(1, &T.ID)
 }
 
 // New 创建

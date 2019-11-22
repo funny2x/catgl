@@ -12,6 +12,7 @@ struct lightObject {
 	// 灯光是否生效
 	bool  IsLight; 
 };
+
 //? 全局灯光
 layout (std140,binding = 1) uniform GlobalLight //* 全局变量
 {

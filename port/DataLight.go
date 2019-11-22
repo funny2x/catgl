@@ -60,6 +60,11 @@ func (L *LightData) Init() error {
 	return nil
 }
 
+// Delete 销毁
+func (L *LightData) Delete() {
+	gl.DeleteBuffers(1, &C.GlobalMatrix)
+}
+
 // Update 主更新
 func (L *LightData) Update() {
 
