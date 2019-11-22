@@ -9,6 +9,8 @@ import (
 )
 
 func main() {
+	// 初始化
+	catgl.NOScreenRender()
 	// 创建场景
 	Scene := &catgl.Scene{}
 	// 场景默认对象
