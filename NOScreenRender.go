@@ -108,5 +108,6 @@ func newNOScreenRender(R *Renderer, lock chan bool) {
 	// 关闭并退出
 	glfw.DetachCurrentContext() //? 分离上下文
 	R.window.Destroy()
+	R.Scene.Delete()
 	R.err <- nil
 }
