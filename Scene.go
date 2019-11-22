@@ -55,13 +55,13 @@ func (S *Scene) Update() {
 		<-S.synclock
 	}
 	// 场景默认对象更新
-	S.Camera.Update() //? 更新摄像机
-	S.Light.Update()  //? 更新灯光
-	//? 游戏对象预更新
+	S.Camera.Update() // 更新摄像机
+	S.Light.Update()  // 更新灯光
+	// 游戏对象预更新
 	for _, M := range S.GameObjectList {
 		M.UpdateBeforehand()
 	}
-	//? 游戏对象渲染更新
+	// 游戏对象渲染更新
 	for _, M := range S.GameObjectList {
 		M.UpdateRendering()
 	}

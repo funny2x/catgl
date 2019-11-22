@@ -30,6 +30,11 @@ type Renderer struct {
 	AspectRatio float32 //* 屏幕高宽比
 }
 
+// GetWindow 得到窗口
+func (R *Renderer) GetWindow() *glfw.Window {
+	return R.window
+}
+
 // New 创建窗口
 func (R *Renderer) New() chan error {
 	// 检测错误
