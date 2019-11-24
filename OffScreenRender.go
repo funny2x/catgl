@@ -1,11 +1,8 @@
 package catgl
 
 import (
-	"fmt"
 	"runtime"
 	"time"
-
-	"gitee.com/RuiCat/catgl/lib/xlib"
 )
 
 // OffScreenRender 离屏渲染
@@ -31,9 +28,6 @@ func OffScreenRender() {
 		runtime.LockOSThread()
 		defer runtime.UnlockOSThread()
 		// 无窗口初始化
-		gDisplay := xlib.XOpenDisplay()
-		fmt.Println("初始化: ", gDisplay)
-
 	}
 	// 初始化
 	go WindowManager.new()
