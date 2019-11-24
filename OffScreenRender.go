@@ -2,6 +2,7 @@ package catgl
 
 import (
 	"fmt"
+	"runtime"
 	"time"
 
 	"gitee.com/RuiCat/catgl/lib/xlib"
@@ -27,8 +28,8 @@ func OffScreenRender() {
 	// 初始化
 	WindowManager.new = func() {
 		// 绑定到主进程
-		//runtime.LockOSThread()
-		//defer runtime.UnlockOSThread()
+		runtime.LockOSThread()
+		defer runtime.UnlockOSThread()
 		// 无窗口初始化
 		gDisplay := xlib.XOpenDisplay()
 		fmt.Println("初始化: ", gDisplay)
