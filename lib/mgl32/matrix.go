@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"text/tabwriter"
 
-	"gitee.com/RuiCat/catgl/lib/matrix"
+	"catgl/lib/matrix"
 )
 
 type Mat2 [4]float32

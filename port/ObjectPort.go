@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // ID uuid用于标记用

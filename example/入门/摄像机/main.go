@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/RuiCat/catgl"
-	"gitee.com/RuiCat/catgl/lib/mgl32"
-	"gitee.com/RuiCat/catgl/port"
+	"catgl"
+	"catgl/lib/mgl32"
+	"catgl/port"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	// 创建场景
 	Scene := &catgl.Scene{}
 	// 场景默认对象
-	Scene.Light = &port.LightData{}
+	Scene.Light = &port.LightData{Quantity: 1}
 	// 设置相机
 	SceneCamera(Scene)
 	// 渲染窗口

@@ -7,7 +7,7 @@
 // codegen generates go code from templates. Intended to be
 // used with go generate; Also makes mgl64 from mgl32.
 // See the invocation in mgl32/util.go for details.
-// To use it, just run "go generate gitee.com/RuiCat/catgl/lib/mgl32"
+// To use it, just run "go generate catgl/lib/mgl32"
 // (or "go generate" in mgl32 directory).
 
 package main

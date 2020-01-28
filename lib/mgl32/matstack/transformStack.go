@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"gitee.com/RuiCat/catgl/lib/mgl32"
+	"catgl/lib/mgl32"
 )
 
 // TransformStack is a linear fully-persistent data structure of matrix

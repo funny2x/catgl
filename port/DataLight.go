@@ -4,8 +4,8 @@ import (
 	"errors"
 	"unsafe"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
-	"gitee.com/RuiCat/catgl/lib/mgl32"
+	"catgl/lib/gl"
+	"catgl/lib/mgl32"
 )
 
 ///

@@ -87,7 +87,7 @@ func returnToPool(slice []float32) {
 	pool, exact := binLog(cap(slice))
 
 	if !exact {
-		panic("attempt to pool slice with non-exact cap. If you're a user, please file an issue with gitee.com/RuiCat/catgl/lib about this bug. This should never happen.")
+		panic("attempt to pool slice with non-exact cap. If you're a user, please file an issue with catgl/lib about this bug. This should never happen.")
 	}
 
 	getPool(pool).Put(slice)

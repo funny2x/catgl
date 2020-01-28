@@ -1,7 +1,7 @@
 package port
 
 import (
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // GameVertexStructure 顶点结构定义

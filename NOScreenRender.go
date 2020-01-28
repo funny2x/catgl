@@ -4,8 +4,8 @@ import (
 	"runtime"
 	"time"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
-	"gitee.com/RuiCat/catgl/lib/glfw"
+	"catgl/lib/gl"
+	"catgl/lib/glfw"
 )
 
 // NOScreenRender 默认渲染

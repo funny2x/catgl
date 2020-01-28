@@ -1,7 +1,7 @@
 package port
 
 import (
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // GameVertexVAO 顶点数组对象

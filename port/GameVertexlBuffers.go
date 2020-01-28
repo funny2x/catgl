@@ -1,7 +1,7 @@
 package port
 
 import (
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // GameVertexlBuffersType 游戏顶点缓冲区类型

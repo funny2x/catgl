@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // GameObject 测试对象
@@ -28,7 +28,7 @@ func (V *GameObject) Init() error {
 	// 设置顶点结构
 	{
 		// 参数
-		posltion := 24 // 一个顶点结构占用大小
+		var posltion int32 = 24 // 一个顶点结构占用大小
 		// 绑定顶点坐标
 		//            绑定索引 元素数量 元素类型 不标准化 结构大小 开始偏移
 		gl.VertexAttribPointer(0, 3, gl.FLOAT, false, posltion, gl.PtrOffset(0)) //- 设置顶点结构
@@ -55,4 +55,9 @@ func (V *GameObject) UpdateRendering() {
 	gl.BindVertexArray(V.VAO)
 	gl.DrawArrays(gl.TRIANGLES, 0, V.Size)
 	gl.BindVertexArray(0)
+}
+
+// Delete 更新接口
+func (V *GameObject) Delete() {
+
 }

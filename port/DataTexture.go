@@ -18,9 +18,9 @@ import (
 	"path"
 	"strconv"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
-	"gitee.com/RuiCat/catgl/lib/image/bmp"
-	"gitee.com/RuiCat/catgl/lib/image/tga"
+	"catgl/lib/gl"
+	"catgl/lib/image/bmp"
+	"catgl/lib/image/tga"
 )
 
 // 纹理变量

@@ -3,9 +3,9 @@ package catgl
 import (
 	"errors"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
-	"gitee.com/RuiCat/catgl/lib/glfw"
-	"gitee.com/RuiCat/catgl/port"
+	"catgl/lib/gl"
+	"catgl/lib/glfw"
+	"catgl/port"
 )
 
 ///

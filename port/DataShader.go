@@ -3,7 +3,7 @@ package port
 import (
 	"errors"
 
-	"gitee.com/RuiCat/catgl/lib/gl"
+	"catgl/lib/gl"
 )
 
 // ShaderData 着色器数据

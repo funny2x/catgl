@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gitee.com/RuiCat/catgl/lib/gl"
-	"gitee.com/RuiCat/catgl/port"
+	"catgl/lib/gl"
+	"catgl/port"
 )
 
 // GameObject 测试对象
@@ -63,4 +63,9 @@ func (V *GameObject) UpdateRendering() {
 	gl.BindVertexArray(V.VAO)
 	gl.DrawArrays(gl.TRIANGLES, 0, V.Size)
 	gl.BindVertexArray(0)
+}
+
+// Delete 更新接口
+func (V *GameObject) Delete() {
+
 }

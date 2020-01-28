@@ -3,7 +3,7 @@ package matstack
 import (
 	"errors"
 
-	"gitee.com/RuiCat/catgl/lib/mgl32"
+	"catgl/lib/mgl32"
 )
 
 // A MatStack is an OpenGL-style matrix stack,

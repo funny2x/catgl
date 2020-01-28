@@ -2,7 +2,7 @@ package matstack
 
 import (
 	"fmt"
-	"gitee.com/RuiCat/catgl/lib/mgl32"
+	"catgl/lib/mgl32"
 	"testing"
 )
 

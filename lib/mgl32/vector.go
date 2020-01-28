@@ -10,7 +10,7 @@ package mgl32
 import (
 	"math"
 
-	"gitee.com/RuiCat/catgl/lib/matrix"
+	"catgl/lib/matrix"
 )
 
 type Vec2 matrix.Vec2
