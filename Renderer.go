@@ -38,6 +38,7 @@ func (R *Renderer) GetWindow() *glfw.Window {
 // New 创建窗口
 func (R *Renderer) New() chan error {
 	// 检测错误
+	R.err = make(chan error, 1)
 	{
 		if WindowManager == nil {
 			R.err <- errors.New("初始化失败: 窗口管理器未初始化")
@@ -53,7 +54,6 @@ func (R *Renderer) New() chan error {
 		}
 	}
 	// 调用创建目标
-	R.err = make(chan error, 1)
 	R.AspectRatio = float32(R.Width / R.Height)
 	WindowManager.add(R)
 	return R.err
