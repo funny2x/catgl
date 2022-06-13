@@ -1,7 +1,7 @@
 package port
 
 import (
-	"catgl/lib/gl"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 // GameVertexlBuffersType 游戏顶点缓冲区类型

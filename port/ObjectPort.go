@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"catgl/lib/gl"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 // ID uuid用于标记用

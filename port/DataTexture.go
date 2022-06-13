@@ -18,9 +18,9 @@ import (
 	"path"
 	"strconv"
 
-	"catgl/lib/gl"
-	"catgl/lib/image/bmp"
-	"catgl/lib/image/tga"
+	"github.com/funny2x/catgl/lib/image/bmp"
+	"github.com/funny2x/catgl/lib/image/tga"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 // 纹理变量

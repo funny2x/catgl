@@ -3,9 +3,9 @@ package catgl
 import (
 	"errors"
 
-	"catgl/lib/gl"
-	"catgl/lib/glfw"
-	"catgl/port"
+	"github.com/funny2x/catgl/port"
+	"github.com/go-gl/gl/v4.1-core/gl"
+	"github.com/go-gl/glfw/v3.3/glfw"
 )
 
 ///

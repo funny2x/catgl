@@ -1,8 +1,8 @@
 package port
 
 import (
-	"catgl/lib/gl"
-	"catgl/lib/mgl32"
+	"github.com/funny2x/mgl32"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 ///

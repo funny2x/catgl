@@ -1,8 +1,8 @@
 package catgl
 
 import (
-	"catgl/lib/gl"
-	"catgl/port"
+	"github.com/funny2x/catgl/port"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 ///

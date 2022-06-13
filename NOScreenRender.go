@@ -4,8 +4,8 @@ import (
 	"runtime"
 	"time"
 
-	"catgl/lib/gl"
-	"catgl/lib/glfw"
+	"github.com/go-gl/gl/v4.1-core/gl"
+	"github.com/go-gl/glfw/v3.3/glfw"
 )
 
 // NOScreenRender 默认渲染

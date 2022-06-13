@@ -3,7 +3,7 @@ package port
 import (
 	"errors"
 
-	"catgl/lib/gl"
+	"github.com/go-gl/gl/v4.1-core/gl"
 )
 
 // ShaderData 着色器数据
